@@ -25,7 +25,10 @@ const getDefaultAvatar = () => {
 };
 
 {
-  getUserAvatar(2)
+  /* 
+    getUserAvatarの引数に1を指定するとアバターを取得出来ますが、それ以外の数字ではデフォルトのアバターが表示されます。 
+  */
+  getUserAvatar(1)
     .catch(getDefaultAvatar)
     .then((img) => {
       document.body.appendChild(img);
